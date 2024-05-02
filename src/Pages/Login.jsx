@@ -32,7 +32,6 @@ export const LoginPage = (props) => {
 
       props.onSuccessLogin(json.profile)
 
-      console.log(json)
       setIsLoading(false)
     } catch(error) {
       setIsLoading(false)

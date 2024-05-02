@@ -33,6 +33,7 @@ export const ContractsWidget = () => {
   useEffect(() => {
     fetchContracts(user.id)
     // Should only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onContractOpen = (id) => {

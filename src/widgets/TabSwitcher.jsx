@@ -10,7 +10,7 @@ export const TabSwitcher = (props) => {
 
   const isClient = user.type === 'client'
 
-  const contactorsOnly = [Tabs.JOBS, Tabs.CONTRACTS, Tabs.ACCOUNT]
+  const contactorsOnly = [Tabs.JOBS, Tabs.CONTRACTS, Tabs.ACCOUNT, Tabs.NEWS]
 
   const tabs = Object.keys(Tabs).filter((el) => isClient ? true : contactorsOnly.includes(el)).map((tab) => {
     return {

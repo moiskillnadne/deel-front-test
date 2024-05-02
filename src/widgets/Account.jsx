@@ -38,6 +38,7 @@ export const AccountWidget = () => {
   useEffect(() => {
     refreshUserInfo()
     // Should only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if(isLoading) {

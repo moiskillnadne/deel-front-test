@@ -32,20 +32,18 @@ export const JobsWidget = () => {
   useEffect(() => {
     fetchUnpaidJobs(user.id)
     // Should only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const payForJob = async (jobId) => {
     setIsPaymentLoading(true)
-    const response = await fetch(`${BACKEND_URL}/jobs/${jobId}/pay`, {
+    await fetch(`${BACKEND_URL}/jobs/${jobId}/pay`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         "profile_id": user.id
       }
     })
-    const data = await response.json()
-
-    console.log(data)
 
     await fetchUnpaidJobs(user.id)
     setIsPaymentLoading(false)

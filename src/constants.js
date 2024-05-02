@@ -4,5 +4,6 @@ export const Tabs = {
   ACCOUNT: 'ACCOUNT',
   CONTRACTS: 'CONTRACTS',
   JOBS: 'JOBS',
-  DEPOSIT: 'DEPOSIT'
+  DEPOSIT: 'DEPOSIT',
+  NEWS: "NEWS"
 }

@@ -30,6 +30,7 @@ export const SingleContract = (props) => {
   useEffect(() => {
     fetchContract()
     // Should only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
